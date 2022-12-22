@@ -1,0 +1,16 @@
+{
+	"extends": [
+		"plugin:@typescript-eslint/recommended",
+		"eslint:recommended",
+		"prettier"
+	],
+	"env": {
+		"node": true,
+		"es6": true,
+		"commonjs": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2019,
+		"project": ["./tsconfig.json"]
+	}
+}
