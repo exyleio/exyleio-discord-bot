@@ -1,17 +1,17 @@
 {
-  "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./build",
+	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./build",
 
-    "target": "ES2019",
-    "module": "Node16",
+		"target": "ES2019",
+		"module": "Node16",
 
-    "strict": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "include": ["./src/**/*"]
+		"strict": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true
+	},
+	"include": ["./src/**/*"]
 }
