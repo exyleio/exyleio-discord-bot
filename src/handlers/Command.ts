@@ -24,10 +24,12 @@ module.exports = (client: Client) => {
 	// 	client.commands.set(command.name, command)
 	// })
 
-	const rest = new REST({ version: "10" }).setToken(process.env.TOKEN)
+	const rest = new REST({ version: "10" }).setToken(
+		process.env.DISCORD_BOT_TOKEN
+	)
 
 	rest
-		.put(Routes.applicationCommands(process.env.BOT_ID), {
+		.put(Routes.applicationCommands(process.env.DISCORD_BOT_ID), {
 			body: slashCommands.map((command) => command.toJSON()),
 		})
 		.then((data: any) => {

@@ -43,7 +43,7 @@ readdirSync(handlersDir).forEach((handler) => {
 	require(`${handlersDir}/${handler}`)(client)
 })
 
-client.login(process.env.TOKEN).catch((err) => {
+client.login(process.env.DISCORD_BOT_TOKEN).catch((err) => {
 	console.error("[CRASH]" + err)
 	return process.exit()
 })
