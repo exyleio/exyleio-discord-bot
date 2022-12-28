@@ -5,13 +5,15 @@
 		"build": "tsc",
 		"start": "npm run clean && npm run build && node ."
 	},
+	"dependencies": {
+		"discord.js": "^14.7.1",
+		"dotenv": "^16.0.3",
+		"glob": "^8.0.3"
+	},
 	"devDependencies": {
 		"@types/glob": "^8.0.0",
 		"@types/node": "^18.11.17",
-		"discord.js": "^14.7.1",
-		"dotenv": "^16.0.3",
 		"eslint": "^8.30.0",
-		"glob": "^8.0.3",
 		"rimraf": "^3.0.2",
 		"typescript": "^4.9.4"
 	}
