@@ -1,9 +1,19 @@
-FROM node:hydrogen-alpine
+# Build Discord Bot
+FROM node:hydrogen-alpine AS builder
 WORKDIR /app
-RUN npm config set cache /tmp --global
 COPY package.json ./
 COPY package-lock.json ./
 RUN npm install
 COPY . .
 RUN npm run build
-ENTRYPOINT ["node", "."]
+
+# Run Discord Bot
+FROM node:hydrogen-alpine
+WORKDIR /app
+COPY package.json ./
+COPY package-lock.json ./
+# this will make "npm install" omit devDependencies
+ENV NODE_ENV production
+RUN npm install
+COPY --from=builder /app/build/ ./build/
+ENTRYPOINT ["node", "build/index.js"]
