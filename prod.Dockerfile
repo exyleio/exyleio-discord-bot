@@ -16,4 +16,4 @@ COPY package-lock.json ./
 ENV NODE_ENV production
 RUN npm install
 COPY --from=builder /app/build/ ./build/
-ENTRYPOINT ["node", "build/index.js"]
+CMD ["node", "build/index.js"]
