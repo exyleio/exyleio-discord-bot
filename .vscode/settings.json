@@ -8,5 +8,10 @@
 		"exyelio",
 		"Exyle",
 		"exyleio"
-	]
+	],
+
+	"editor.codeActionsOnSave": {
+		// for import sorting and stuff
+		"source.fixAll.eslint": true
+	}
 }

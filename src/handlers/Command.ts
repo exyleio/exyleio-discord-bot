@@ -1,16 +1,17 @@
-import type { Command, SlashCommand } from "../discord.js"
-
-import { Client, Routes, SlashCommandBuilder } from "discord.js"
 import { REST } from "@discordjs/rest"
+import { Client, Routes, SlashCommandBuilder } from "discord.js"
 import { readdirSync } from "fs"
 import { join } from "path"
 
+import type { SlashCommand } from "../discord.js"
+
 module.exports = (client: Client) => {
 	const slashCommands: SlashCommandBuilder[] = []
-	let slashCommandsDir = join(__dirname, "../slashCommands")
+	const slashCommandsDir = join(__dirname, "../slashCommands")
 	readdirSync(slashCommandsDir).forEach((file) => {
 		if (!file.endsWith(".js")) return
-		let command: SlashCommand = require(`${slashCommandsDir}/${file}`).default
+		// eslint-disable-next-line @typescript-eslint/no-var-requires
+		const command: SlashCommand = require(`${slashCommandsDir}/${file}`).default
 		slashCommands.push(command.command)
 		client.slashCommands.set(command.command.name, command)
 	})

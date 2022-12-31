@@ -1,14 +1,15 @@
 import type { Interaction } from "discord.js"
+
 import type { BotEvent } from "../discord.js"
 
 const event: BotEvent = {
 	name: "interactionCreate",
 	execute: (interaction: Interaction) => {
 		if (interaction.isChatInputCommand()) {
-			let command = interaction.client.slashCommands.get(
+			const command = interaction.client.slashCommands.get(
 				interaction.commandName
 			)
-			let cooldown = interaction.client.cooldowns.get(
+			const cooldown = interaction.client.cooldowns.get(
 				`${interaction.commandName}-${interaction.user.username}`
 			)
 			if (!command) return

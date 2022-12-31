@@ -1,10 +1,10 @@
 import type {
-	SlashCommandBuilder,
-	CommandInteraction,
-	Collection,
-	PermissionResolvable,
-	Message,
 	AutocompleteInteraction,
+	Collection,
+	CommandInteraction,
+	Message,
+	PermissionResolvable,
+	SlashCommandBuilder,
 } from "discord.js"
 
 declare module "discord.js" {

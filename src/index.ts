@@ -1,9 +1,9 @@
-import type { Command, SlashCommand } from "./discord.js"
-
 import { Client, Collection, GatewayIntentBits, Partials } from "discord.js"
 import dotenv from "dotenv"
 import { readdirSync } from "fs"
 import { join } from "path"
+
+import type { Command, SlashCommand } from "./discord.js"
 
 // load .env
 dotenv.config()
