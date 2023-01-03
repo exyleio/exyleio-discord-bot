@@ -1,3 +1,7 @@
 {
-	"recommendations": ["dbaeumer.vscode-eslint", "mikestead.dotenv"]
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"mikestead.dotenv",
+		"ms-azuretools.vscode-docker"
+	]
 }

@@ -6,12 +6,11 @@
 		"start": "npm run clean && npm run build && node ."
 	},
 	"dependencies": {
-		"discord.js": "^14.7.1",
-		"dotenv": "^16.0.3",
-		"glob": "^8.0.3"
+		"@sapphire/framework": "latest",
+		"discord.js": "13.x",
+		"dotenv": "^16.0.3"
 	},
 	"devDependencies": {
-		"@types/glob": "^8.0.0",
 		"@types/node": "^18.11.17",
 		"@typescript-eslint/eslint-plugin": "^5.47.1",
 		"eslint": "^8.30.0",
