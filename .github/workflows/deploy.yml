@@ -21,6 +21,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          file: prod.Dockerfile
+          file: Dockerfile.prod
           push: true
           tags: developomp/exyleio-discord-bot:latest
