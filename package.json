@@ -1,9 +1,8 @@
 {
-	"main": "build/index.js",
 	"scripts": {
 		"clean": "rimraf build",
 		"build": "tsc",
-		"start": "npm run clean && npm run build && node ."
+		"start": "npm run clean && npm run build && node build/index.js"
 	},
 	"dependencies": {
 		"@sapphire/framework": "latest",
