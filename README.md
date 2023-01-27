@@ -1,5 +1,1 @@
-# Exyle.io Discord Bot
-
-- submit issues [here](https://github.com/exyleio/exyleio/issues)
-
-## [Documentation](https://exyleio-docs.web.app/docs/projects/discord-bot/overview)
+Exyle.io has merged with [War Brokers](https://github.com/War-Brokers)
